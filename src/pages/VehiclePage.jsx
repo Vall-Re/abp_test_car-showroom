@@ -81,13 +81,13 @@ export default function VehiclePage() {
             className="main-image"
             src={activeImage}
             alt={vehicle.title}
-            width="300"
           />
 
           <div className="thumbnails-images">
             {vehicle.images.map((img, index) => (
               <img
-                className={`thumbnail-item ${activeImage === img ? 'selected' : ''}`} key={index}
+                className={`thumbnail-item ${activeImage === img ? 'selected' : ''}`} 
+                key={index}
                 src={img}
                 alt="small img"
                 onClick={() => setActiveImage(img)}

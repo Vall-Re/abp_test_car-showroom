@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo-wrapper">
-          <img className="header-logo" src="/public/car_showroom_logo.jpg" alt="logo" />
+          <img className="header-logo" src="/car_showroom_logo.jpg" alt="logo" />
           <h1 className="header-title">CAR SHOWROOM</h1>
         </Link>
       </div>

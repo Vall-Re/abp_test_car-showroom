@@ -2,11 +2,16 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
 }
 
 .main-content {
   flex: 1;
+  width: 100%;
+  max-width: 1440px;
   padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* // -----HEADER-----// */
@@ -52,12 +57,11 @@
 
 @media (min-width: 768px) {
   .main-content {
-    max-width: 1440px;
-    margin: 0 auto;
+    
     padding: 40px;
   }
 
-  header {
+  .header {
     height: 80px;
   }
 
@@ -385,6 +389,7 @@
   .vehicles-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 1440px;
   }
 
   .badge-discount {
@@ -409,7 +414,7 @@
 .vehicle-details {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: white;
   padding: 20px;
   border-radius: 20px;
@@ -417,6 +422,8 @@
 
 .back-to-catalog {
   display: flex;
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 20px;
   text-decoration: none;
   color: grey;
@@ -445,11 +452,11 @@
 
 .main-image {
   width: 100%;
-
-  height: auto;
+  aspect-ratio: 16 / 9;
+  /* height: auto; */
   border-radius: 20px;
   background: whitesmoke;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .thumbnails-images {
@@ -734,18 +741,20 @@
 }
 
 @media (min-width: 768px) {
-  .vehicle-details {
-    max-width: 1440px;
-  }
   .vehicle-main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
   .gallery {
     grid-column: 1;
     min-width: 350px;
+  }
+  .main-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .vehicle-info {

@@ -1,16 +1,76 @@
-# React + Vite
+# 🚗 Car Showroom — Віртуальний автосалон
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестове завдання для розробки інтерфейсу каталогу автомобілів з використанням DummyJSON API.
 
-Currently, two official plugins are available:
+Виконано для вакансії Junior/Trainee Frontend Developer в компанії **ABP**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**🔗Посилання на застосунок та репозиторій:** 
 
-## React Compiler
+- [DEMO LINK](https://abp-test-car-showroom.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [GitHub](https://github.com/Vall-Re/abp_test_car-showroom)
 
-## Expanding the ESLint configuration
+## 📝 Опис функціоналу
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Застосунок дозволяє відвідувачам переглядати асортимент автомобілів та взаємодіяти з ними через систему відгуків.
+
+---
+
+### Основні можливості:
+- **Каталог автомобілів:** Відображення списку авто, отриманих з API, відфільтрованих за категорією `vehicle`.
+- **Детальна інформаці:** Розширена інформація про кожну модель (характеристики, габарити, вага, гарантія).
+- **Інтерактивна галерея:** Можливість змінювати головне зображення авто при кліку на мініатюри.
+- **Система відгуків:**
+  - Перегляд існуючих відгуків з API.
+  - Додавання власних коментарів через форму.
+  - **Збереження даних:** Всі нові коментарі зберігаються у `localStorage` та залишаються доступними після перезавантаження сторінки.
+- **Валідація:** Форма додавання відгуку перевіряє наявність імені та довжину тексту.
+
+---
+
+## 🛠 Технологічний стек
+
+- **Framework:** React (Vite)
+- **Routing:** React Router DOM
+- **Icons:** Lucide-React
+- **Styling:** Чистий CSS (без фреймворків) з використанням Flexbox та Grid.
+- **API:** [DummyJSON](https://dummyjson.com/docs/products)
+
+---
+
+## 📐 Верстка та адаптивність
+
+Застосунок розроблений за принципом **Mobile First**. Верстка є повністю адаптивною та коректно відображається у діапазоні роздільної здатності від **420px до 1440px**. Дотримано семантики HTML-елементів для кращої доступності.
+
+---
+
+## 🚀 Інструкція з локального запуску
+
+Щоб запустити проєкт на власному комп'ютері, виконайте наступні кроки:
+
+1. **Клонуйте репозиторій:**
+   ```bash
+   git clone [https://github.com/Vall-Re/abp_test_car-showroom.git](https://github.com/Vall-Re/abp_test_car-showroom.git)
+   ```
+
+2. Перейдіть до папки проєкту:
+
+```bash
+cd car-showroom
+```
+
+3. Встановіть необхідні залежності:
+
+```bash
+npm install
+```
+
+4. Запустіть сервер для розробки:
+
+```bash
+npm run dev
+```
+
+5. Відкрийте застосунок:
+
+Перейдіть за адресою http://localhost:5173 у вашому браузері.
